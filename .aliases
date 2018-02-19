@@ -9,13 +9,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Git Aliases
-alias gc ="git clone"
-alias gpl ="git pull"
-alias gp ="git push"
-alias gpf ="git push --force"
-alias gco ="git checkout"
-alias grb ="git rebase"
-alias grbm ="gco master && gpl && gco - && grb master"
+alias gc="git clone"
+alias gpl="git pull"
+alias gp="git push"
+alias gpf="git push --force"
+alias gco="git checkout"
+alias grb="git rebase"
+alias grbm="gco master && gpl && gco - && grb master"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
