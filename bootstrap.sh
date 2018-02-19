@@ -22,6 +22,7 @@ else
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;
+		echo "Dot files installed/updated. Reopen the terminal or 'source ~/.bash_profile'"
 	fi;
 fi;
 unset doIt;
