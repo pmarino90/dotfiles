@@ -17,6 +17,9 @@ alias gco="git checkout"
 alias grb="git rebase"
 alias grbm="gco master && gpl && gco - && grb master"
 
+# Working stuff
+alias latest-staging="git tag | grep staging- | sort -r | head -n 1"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
