@@ -18,8 +18,9 @@ alias grb="git rebase"
 alias grbm="gco master && gpl && gco - && grb master"
 alias gl="git log --oneline"
 alias gle="git log"
+alias gb="git branch"
 
-# Working stuff
+# Work-releted stuff
 alias latest-staging="git tag | grep staging- | sort -r | head -n 1"
 
 # Detect which `ls` flavor is in use
