@@ -60,3 +60,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Lock the screen (when going AFK)
 alias afk="pmset sleepnow"
+
+# Starts and stops the local development database
+alias postgres-start="pg_ctl -D /usr/local/var/postgres start"
+alias postgres-stop="pg_ctl -D /usr/local/var/postgres stop"
