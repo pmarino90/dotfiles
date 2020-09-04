@@ -19,3 +19,5 @@ export NVM_DIR="$HOME/.nvm"
 
 
 export PATH="$HOME/flutter/bin:$PATH"
+
+eval "$(rbenv init -)"

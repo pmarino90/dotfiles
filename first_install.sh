@@ -11,6 +11,7 @@ brew install coreutils
 brew install bash
 brew install bash-completion2
 brew install git-town
+brew install rbenv
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
