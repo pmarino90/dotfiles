@@ -17,7 +17,6 @@ cask "alfred"
 cask "viscosity"
 cask "android-studio"
 cask "camo-studio"
-cask "keybase"
 cask "little-snitch"
 cask "spectacle"
 
