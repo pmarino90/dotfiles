@@ -1,3 +1,20 @@
 #!/usr/bin/env bash
 
-echo "ASDF configurations"
+echo "ASDF configurations..."
+asdf plugin-add erlang
+asdf plugin-add elixir
+asdf plugin-add nodejs
+echo "Install Elixir..."
+asdf install elixir 1.12.3-otp-24
+asdf install erlang 24.1
+
+echo "Install Nodejs..."
+asdf install nodejs 17.1.0
+asdf install nodejs lts-fermium
+
+asdf global elixir 1.12.3-otp-24
+asdf global erlang 24.1
+asdf global nodejs 17.1.0
+
+echo "Setup rustup..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

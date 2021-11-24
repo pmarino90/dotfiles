@@ -2,6 +2,7 @@ tap "homebrew/cask"
 
 brew "starship"
 brew "asdf"
+brew "yarn"
 
 cask "google-chrome"
 cask "firefox"
@@ -20,5 +21,5 @@ cask "spectacle"
 
 mas "1password", id: 1333542190
 mas "slack", id: 803453959
-mas  "telegram", id: 747648890
+mas "telegram", id: 747648890
 mas "tailscale", id: 1475387142
