@@ -1,7 +1,5 @@
 tap "homebrew/cask"
 
-cask_args appdir: "~/Applications"
-
 brew "starship"
 brew "asdf"
 
