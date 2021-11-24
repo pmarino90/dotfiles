@@ -5,6 +5,7 @@ _comp_options+=(globdots)
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export PATH="/opt/homebrew/bin:$PATH";
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
