@@ -20,9 +20,6 @@ alias gl="git log --oneline"
 alias gle="git log"
 alias gb="git branch"
 
-# Work-releted stuff
-alias latest-staging="git tag | grep staging- | sort -r | head -n 1"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -48,7 +45,6 @@ alias ls="command ls ${colorflag}"
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 
-
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
@@ -60,7 +56,3 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Lock the screen (when going AFK)
 alias afk="pmset sleepnow"
-
-# Starts and stops the local development database
-alias postgres-start="pg_ctl -D /usr/local/var/postgres start"
-alias postgres-stop="pg_ctl -D /usr/local/var/postgres stop"
