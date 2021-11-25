@@ -2,6 +2,8 @@ autoload -Uz compinit
 compinit
 _comp_options+=(globdots)
 
+export LANG=en_US.UTF-8
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 export PATH="/opt/homebrew/bin:$PATH";
