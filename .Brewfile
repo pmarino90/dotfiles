@@ -3,6 +3,7 @@ tap "homebrew/cask"
 brew "starship"
 brew "asdf"
 brew "yarn"
+brew "gnupg"
 
 cask "google-chrome"
 cask "firefox"
