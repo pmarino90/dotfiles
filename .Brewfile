@@ -4,6 +4,8 @@ brew "starship"
 brew "asdf"
 brew "yarn"
 brew "gnupg"
+brew "cocoapods"
+brew "docker"
 
 cask "google-chrome"
 cask "firefox"
