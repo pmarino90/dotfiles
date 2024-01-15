@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
 export EDITOR='vi';
+export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications"
