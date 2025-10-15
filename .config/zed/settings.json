@@ -127,37 +127,6 @@
       }
     }
   },
-  "context_servers": {
-    "linear": {
-      "source": "custom",
-      "enabled": true,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
-      "env": {}
-    },
-    "taskwarrior": {
-      "source": "custom",
-      "enabled": true,
-      "command": "node",
-      "args": ["/Users/paolomarino/code/taskwarrior-mcp/dist/index.js"],
-      "env": {}
-    },
-    "tidewave-mcp": {
-      "source": "custom",
-      "enabled": true,
-      "command": "/Users/paolomarino/bin/mcp-proxy",
-      "args": ["http://localhost:4000/tidewave/mcp"],
-      "env": {}
-    }
-  },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://100.89.34.41:11434",
-      "available_models": []
-    },
-
-    "lmstudio": {
-      "api_url": "http://100.89.34.41:1234/api/v0"
-    }
-  }
+  "context_servers": {},
+  "language_models": {}
 }
