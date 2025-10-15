@@ -1,129 +1,163 @@
-// Zed keymap
+// Zed settings
 //
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
 //
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
-[
-  {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "features": {
+    "edit_prediction_provider": "none"
   },
-  {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
-    "context": "Dock || Terminal || Editor",
-    "bindings": {
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-    "bindings": {
-      // put key-bindings here if you want them to work only in normal mode
-      // Window movement bindings
-      // Ctrl jklk to move between panes
-
-      // +LSP
-      "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions",
-      "space c r": "editor::Rename",
-      "g d": "editor::GoToDefinition",
-      "g D": "editor::GoToDefinitionSplit",
-      "g i": "editor::GoToImplementation",
-      "g I": "editor::GoToImplementationSplit",
-      "g t": "editor::GoToTypeDefinition",
-      "g T": "editor::GoToTypeDefinitionSplit",
-      "g r": "editor::FindAllReferences",
-      "] d": "editor::GoToDiagnostic",
-      // TODO: Go to next/prev error
-      "] e": "editor::GoToDiagnostic",
-      // Symbol search
-      "s s": "outline::Toggle",
-      "s S": "project_symbols::Toggle",
-      // Diagnostic
-      "space x x": "diagnostics::Deploy",
-
-      // +Git
-      // Git prev/next hunk
-      "] h": "editor::GoToHunk",
-
-      // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
-
-      // + Buffers
-      // Switch between buffers
-      "shift-h": "pane::ActivatePreviousItem",
-      "shift-l": "pane::ActivateNextItem",
-      // Close active panel
-      "shift-q": "pane::CloseActiveItem",
-      "ctrl-q": "pane::CloseActiveItem",
-      "space b d": "pane::CloseActiveItem",
-      // Close other items
-      "space b o": "pane::CloseInactiveItems",
-      // Save file
-      "ctrl-s": "workspace::Save",
-      // File finder
-      "space space": "file_finder::Toggle",
-      // Project search
-      "space /": "pane::DeploySearch",
-      // TODO: Open other files
-      // Show project panel with current file
-      "space e": "pane::RevealInProjectPanel"
-    }
-  },
-  {
-    "context": "Editor && VimControl && !VimWaiting && !menu",
-    "bindings": {
-      "shift-k": "editor::Hover",
-      //"space c a": "editor::ToggleCodeActions",
-      "space l f": "editor::Format",
-      "space d": "diagnostics::Deploy",
-      "space f f": "file_finder::Toggle",
-      "space o": "tab_switcher::Toggle",
-      "space e": "workspace::ToggleLeftDock",
-      "space /": "workspace::NewSearch",
-      "n": "search::SelectNextMatch",
-      "shift-n": "search::SelectPreviousMatch",
-      "space t": "workspace::NewCenterTerminal",
-      "g b": "editor::ToggleComments",
-      "+ +": "workspace::Save",
-      "space c": "pane::CloseActiveItem"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
-    "bindings": {
-      "shift-j": "editor::MoveLineDown",
-      "shift-k": "editor::MoveLineUp"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-z": "workspace::ToggleZoom",
-      "cmd-k": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false
+  "agent": {
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "linear": {
+            "tools": {
+              "update_project": true,
+              "update_issue": true,
+              "search_documentation": true,
+              "list_users": true,
+              "list_teams": false,
+              "list_projects": true,
+              "list_project_labels": true,
+              "list_my_issues": true,
+              "list_issues": true,
+              "list_cycles": true,
+              "list_comments": true,
+              "get_project": true,
+              "get_issue_status": true,
+              "get_issue": true,
+              "create_issue": true,
+              "create_comment": true
+            }
+          },
+          "tidewave-mcp": {
+            "tools": {
+              "search_package_docs": true,
+              "list_liveview_pages": true,
+              "get_source_location": true,
+              "get_package_location": true,
+              "get_logs": true,
+              "get_ecto_schemas": true,
+              "get_docs": true
+            }
+          },
+          "taskwarrior": {
+            "tools": {
+              "complete_task": true,
+              "list_tasks": true,
+              "get_task": true
+            }
+          }
         }
-      ],
-      "ctrl-x": "tab_switcher::CloseSelectedItem"
+      }
+    },
+    "single_file_review": true,
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "lmstudio",
+      "model": "openai/gpt-oss-20b"
     }
   },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "cmd-t": "workspace::NewTerminal"
+  "theme": "Ayu Dark",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+  "vim_mode": true,
+  "cursor_blink": false,
+  "vertical_scroll_margin": 0,
+  "vim": {
+    "use_system_clipboard": "always"
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+  "relative_line_numbers": true,
+  "preferred_line_length": 90,
+  "soft_wrap": "preferred_line_length",
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+      "delay_ms": 500
+    }
+  },
+  "terminal": {
+    "alternate_scroll": "off",
+    "blinking": "terminal_controlled",
+    "copy_on_select": true,
+    "line_height": "standard",
+    "toolbar": {},
+    "working_directory": "current_project_directory"
+  },
+  "languages": {
+    "Elixir": {
+      "language_servers": ["elixir-ls", "!expert", "!next-ls", "!lexical"]
+    }
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"]
+      }
+    }
+  },
+  "context_servers": {
+    "linear": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
+      "env": {}
+    },
+    "taskwarrior": {
+      "source": "custom",
+      "enabled": true,
+      "command": "node",
+      "args": ["/Users/paolomarino/code/taskwarrior-mcp/dist/index.js"],
+      "env": {}
+    },
+    "tidewave-mcp": {
+      "source": "custom",
+      "enabled": true,
+      "command": "/Users/paolomarino/bin/mcp-proxy",
+      "args": ["http://localhost:4000/tidewave/mcp"],
+      "env": {}
+    }
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://100.89.34.41:11434",
+      "available_models": []
+    },
+
+    "lmstudio": {
+      "api_url": "http://100.89.34.41:1234/api/v0"
     }
   }
-]
+}
