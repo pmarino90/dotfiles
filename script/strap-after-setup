@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-echo "ASDF configurations..."
-asdf plugin-add erlang
-asdf plugin-add elixir
-asdf plugin-add nodejs
-
-echo "Setup rustup..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
