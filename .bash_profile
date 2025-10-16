@@ -7,3 +7,4 @@ fi
 
 # User specific environment and startup programs
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+. "$HOME/.cargo/env"
