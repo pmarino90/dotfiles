@@ -1,2 +1,2 @@
 # cleanup download folder
-*/10 * * * * $HOME/.local/bin/obliviate $HOME/Downloads
+0 10 * * * $HOME/.local/bin/obliviate $HOME/Downloads
