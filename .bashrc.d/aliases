@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
+# Git Aliases
+alias gc="git clone"
+alias gpl="git pull"
+alias gp="git push"
+alias gpf="git push --force"
+alias gco="git checkout"
+alias grb="git rebase"
+alias grbm="gco master && gpl && gco - && grb master"
+alias gl="git log --oneline"
+alias gle="git log"
+alias gb="git branch"
+
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='eza -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+alias lzd='lazydocker'
+alias lzg='lazygit'

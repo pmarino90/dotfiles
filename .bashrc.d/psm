@@ -1,0 +1,6 @@
+#! /bin/bash
+
+
+# Compression
+psm-compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
+alias psm-decompress="tar -xzf"

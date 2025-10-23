@@ -26,6 +26,7 @@ unset rc
 
 . <(asdf completion bash)
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 . "$HOME/.cargo/env"
